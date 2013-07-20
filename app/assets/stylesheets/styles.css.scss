@@ -1,0 +1,39 @@
+@import 'bootstrap';
+
+@import 'bootstrap-responsive';
+
+body {
+	padding-top: 60px
+}
+
+footer {
+	font-size: 10px;
+	color: gray;
+	margin-top: 50px;
+	a {
+		color: gray;
+	}
+}
+
+.span3 {
+	background-color: rgb(238, 238, 238);
+	margin-top: 30px;
+}
+
+ .span9 {
+ 	background-color: rgb(238, 238, 238);
+ 	margin-top: 30px;
+ }
+
+ p {
+ 	padding-right: 30px;
+ 	padding-left: 30px;
+ }
+
+ h1 {
+ 	text-align: center;
+ }
+
+ h3 {
+ 	text-align: center;
+ }
