@@ -12,7 +12,7 @@
       </a>
  
       <!-- Be sure to leave the brand out there if you want it shown -->
-      <a class="brand" href="#">Untold Histories</a>
+      <%= link_to "Untold Histories", root_path, class: "brand" %>
  
       <!-- Everything you want hidden at 940px or less, place within here -->
       <div class="nav-collapse collapse">
@@ -27,13 +27,19 @@
 		</ul>
 
 		<ul class="nav pull-right">
-			<li>
-				<%= link_to "Sign Up", "#" %>
-			</li>
-			<li>
-				<%= link_to "Log In", "#" %>
-			<li>
-		</ul
+      <% if user_signed_in? %>
+  			<li>
+          <%= link_to "Edit Profile", edit_user_registration_path %>
+        </li>
+        <li>
+          <%= link_to "Logout", destroy_user_session_path, method: :delete %>
+  			</li>
+      <% else %>
+    		<li>
+    			<%= link_to "Log In", new_user_session_path %>
+    		<li>
+      <% end %>
+		</ul>
       </div>
  
     </div>

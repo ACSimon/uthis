@@ -5,15 +5,31 @@
 
   </div>
 
-  <div class="span9">
-		<h1>Untold Histories</h1>
+  <% if user_signed_in? %>
 
-		<p>The <em>Truth</em> about history, as told by those who know best: The People.</p>
+  	<div class="span9">
 
-		<p>Want to add your favorite, little-known facts about history? Then click the button below to get started!</p>
+	  	<h1>Welcome to Untold Histories!</h1>
 
-		<p> <%= link_to "Sign up now!", "#", class: "btn btn-success" %>
-	</div>
+	  	<p>This is where all the interesing stuff will eventually go.</p>
+
+	  	<p> <%= link_to "Sign out", destroy_user_session_path, class: "btn btn-warning"%>
+	  		
+  	</div>
+
+  <% else %>
+
+	  <div class="span9">
+			<h1>Untold Histories</h1>
+
+			<p>The <em>Truth</em> about history, as told by those who know best: The People.</p>
+
+			<p>Want to add your favorite, little-known facts about history? Then click the button below to get started!</p>
+
+			<p> <%= link_to "Sign up now!", new_user_registration_path, class: "btn btn-success" %>
+			</p>
+		</div>
+	<% end %>
 </div>
 
 
